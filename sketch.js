@@ -49,7 +49,7 @@ function draw() {
 
 
   push()
-  translate(0, 100, 0)
+  translate(0, 100, zmm.value())
   rotateX(-45 + map(mouseY, 0, height, 180, -180))
   ill = ill % 360
   noStroke()
