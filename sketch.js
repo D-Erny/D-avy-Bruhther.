@@ -30,8 +30,8 @@ function draw() {
   rectMode(CENTER)
   angleMode(DEGREES)
   background(10);
-  spdn.value(spd.value())
-  zmmn.value(zmm.value())
+  spdn = spd.value()
+  zmmn = zmm.value()
 
   directionalLight(255, 255, 255, 0, 100, 0)
   //push()
