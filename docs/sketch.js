@@ -13,12 +13,12 @@ function setup() {
   screw = loadModel("tinker.obj")
   body = loadModel("tinker3.obj")
   holder = loadModel("tinker2.obj")
-  spd = createSlider(-10, 10, 3, 0.1);
+  spd = createSlider(-10, 10, 1, 0.5);
   spd.style('width', '80px');
   spd.parent('s1')
   spdn = createP(spd.value())
   spdn.parent('s1')
-  zmm = createSlider(0, 180, 0, 5);
+  zmm = createSlider(0, 180, 60, 5);
   zmm.style('width', '80px');
   zmm.parent('s2')
   zmmn = createP(zmm.value())
@@ -61,7 +61,7 @@ function draw() {
   rotateX(135)
   translate(0, -5, 0)
   rotateY(0)
-  rotateZ(ill)
+  rotateZ(ill*spdn.elt.innerText)
   //rotateZ(0)
   translate(0, 0, -5.5)
   ambientMaterial(15, 15, 255)
