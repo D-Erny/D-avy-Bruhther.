@@ -49,14 +49,14 @@ function draw() {
 
 
   push()
-  translate(0, 100, zmm.value())
+  translate(0, 100, 0)
   rotateX(-45 + map(mouseY, 0, height, 180, -180))
   ill = ill % 360
   noStroke()
 
   push()
   rotateY(map(mouseX, 0, width, -180, 180))
-  translate(0, -75, 0)
+  translate(0, -75, 0+zmm.value())
   translate(0, -10, 0)
   rotateX(135)
   translate(0, -5, 0)
@@ -70,7 +70,7 @@ function draw() {
 
   push()
   rotateY(map(mouseX, 0, width, -180, 180))
-  translate(-10, 4, 0)
+  translate(-10, 4, 0+zmm.value())
   translate(0, -75, 0)
   rotateX(135)
   rotateY(0)
@@ -89,7 +89,7 @@ function draw() {
   rotateY(180)
   rotateZ(0)
 
-  ambientMaterial(15, 255, 15)
+  ambientMaterial(15, 255, 15+zmm.value())
   model(holder)
   pop()
   pop()
