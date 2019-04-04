@@ -16,10 +16,11 @@ function setup() {
   spd = createSlider(-10, 10, 3, 0.1);
   spd.style('width', '80px');
   spd.parent('s1')
-  spdn = createDiv(spd.value())
+  spdn = createP(spd.value())
   zmm = createSlider(-100, 100, 0, 5);
   zmm.style('width', '80px');
   zmm.parent('s2')
+  zmmn = createP(zmm.value())
 }
 var ill = 0;
 
@@ -27,6 +28,7 @@ function draw() {
   rectMode(CENTER)
   angleMode(DEGREES)
   background(10);
+  zmmn = zmm.value()
 
   directionalLight(255, 255, 255, 0, 100, 0)
   //push()
@@ -88,4 +90,4 @@ function draw() {
   model(holder)
   pop()
   pop()
-} 
+}
