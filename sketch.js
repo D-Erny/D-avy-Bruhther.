@@ -8,7 +8,7 @@ var spdn
 var zmmn
 
 function setup() {
-  canv = createCanvas(800, 800, WEBGL);
+  canv = createCanvas(600, 600, WEBGL);
   canv.parent('canv')
   screw = loadModel("tinker.obj")
   body = loadModel("tinker3.obj")
@@ -18,7 +18,7 @@ function setup() {
   spd.parent('s1')
   spdn = createP(spd.value())
   spdn.parent('s1')
-  zmm = createSlider(-100, 100, 0, 5);
+  zmm = createSlider(0, 180, 0, 5);
   zmm.style('width', '80px');
   zmm.parent('s2')
   zmmn = createP(zmm.value())
