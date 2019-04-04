@@ -32,7 +32,7 @@ function draw() {
   background(10);
   spdn.elt.innerText = (spd.value())
   zmmn.elt.innerText = (zmm.value())
-
+  perspective(zmmn.elt.innerText)
   directionalLight(255, 255, 255, 0, 100, 0)
   //push()
   //translate(75,0,0)
@@ -56,7 +56,7 @@ function draw() {
 
   push()
   rotateY(map(mouseX, 0, width, -180, 180))
-  translate(0, -75, 0+zmm.value())
+  translate(0, -75, 0)
   translate(0, -10, 0)
   rotateX(135)
   translate(0, -5, 0)
@@ -70,7 +70,7 @@ function draw() {
 
   push()
   rotateY(map(mouseX, 0, width, -180, 180))
-  translate(-10, 4, 0+zmm.value())
+  translate(-10, 4, 0)
   translate(0, -75, 0)
   rotateX(135)
   rotateY(0)
@@ -89,7 +89,7 @@ function draw() {
   rotateY(180)
   rotateZ(0)
 
-  ambientMaterial(15, 255, 15+zmm.value())
+  ambientMaterial(15, 255, 15)
   model(holder)
   pop()
   pop()
